@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import { scryRenderedComponentsWithType } from "react-dom/test-utils";
 
 const initialState = {
-  count: 42
+  count: 0
 };
 
 function reducer(state = initialState, action) {
@@ -28,8 +28,6 @@ function reducer(state = initialState, action) {
 
 //Create a store
 const store = createStore(reducer); // pass the reducer to createStore
-
-store.dispatch({ type: "DECREMENT" });
 
 function App() {
   return (
